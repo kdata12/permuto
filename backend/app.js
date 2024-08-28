@@ -8,7 +8,7 @@ import { PrismaSessionStore } from "@quixo3/prisma-session-store";
 import checkAuth from "./middleware/checkAuth.js";
 
 const app = express();
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static("build"));
 const originConfig =
   process.env.NODE_ENV === "production"
     ? process.env.PORT
